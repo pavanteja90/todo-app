@@ -31,3 +31,46 @@
     transform: rotate(360deg);
   }
 }
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.padding {
+    padding: 10px;
+}
+
+.padding-left {
+    padding-left: 10px;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.pull-right {
+    float: right;
+}
+
+.vertical-middle {
+    vertical-align: middle;
+}
+
+.no-margin {
+    margin: 0;
+}
