@@ -20,6 +20,7 @@ class App extends React.Component {
         this.findMaxID = this.findMaxID.bind(this);
         this.AddTodo = this.AddTodo.bind(this);
         this.saveTodo = this.saveTodo.bind(this);
+        this.deleteAddTodo = this.deleteAddTodo.bind(this);
     }
 
     handleChange(id) {
@@ -70,6 +71,16 @@ class App extends React.Component {
         })
     }
 
+    deleteAddTodo() {
+        this.setState(prevState => {
+            var changedState = false
+            return {
+                data: prevState.data,
+                addTodo: changedState
+            }
+        });
+    }
+
     AddTodo() {
         this.setState(prevState => {
             var changedState = true
@@ -108,7 +119,7 @@ class App extends React.Component {
         });
         var addTDC
         if(this.state.addTodo) {
-            addTDC = <AddTodoComponent key='1' saveTodo={this.saveTodo}/>
+            addTDC = <AddTodoComponent key='1' saveTodo={this.saveTodo} deleteAddTodo={this.deleteAddTodo}/>
         }
         return(
             <div>
